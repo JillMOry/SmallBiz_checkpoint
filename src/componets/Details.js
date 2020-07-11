@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Paper, Chip, Button } from "@material-ui/core";
-import { Component } from "react";
 
 const Details = (props) => {
 	const id = props.match.params.id;

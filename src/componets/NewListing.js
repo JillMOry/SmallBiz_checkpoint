@@ -7,7 +7,7 @@ import {
 	DialogTitle
 } from "@material-ui/core";
 
-class Add extends Component {
+class AddListing extends Component {
 	state = {
 		open: false,
 		name: "",
@@ -31,6 +31,10 @@ class Add extends Component {
 		console.log("THE LISTING", payload);
 		this.props.addListing(payload);
 		this.setState({ open: false });
+	};
+
+	componentDidMount = () => {
+		console.log(this.props);
 	};
 
 	componentDidUpdate = (prevProps, prevState) => {
@@ -66,7 +70,7 @@ class Add extends Component {
 								style={{
 									display: "flex",
 									flexDirection: "column",
-									width: "350px"
+									width: "500px"
 								}}
 							>
 								<TextField
@@ -120,4 +124,4 @@ class Add extends Component {
 	}
 }
 
-export default Add;
+export default AddListing;
