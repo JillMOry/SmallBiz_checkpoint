@@ -38,6 +38,7 @@ const New = (props) => {
 							</TableCell>
 							<TableCell>{listing["description"]}</TableCell>
 							<TableCell>{listing["hours"]}</TableCell>
+							<TableCell>{listing["phone"]}</TableCell>
 							<TableCell>{listing["address"]}</TableCell>
 							<DeleteIcon
 								// add onClick method here

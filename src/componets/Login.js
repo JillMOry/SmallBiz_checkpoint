@@ -44,7 +44,7 @@ const Login = (props) => {
 				color="primary"
 				onClick={() => props.login()}
 			>
-				<Link to={`/removelisting`}>Login </Link>
+				<Link to={`/remove`}>Login </Link>
 			</Button>
 		</Container>
 	);
