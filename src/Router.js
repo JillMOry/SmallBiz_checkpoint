@@ -6,16 +6,11 @@ import NewListing from "./containers/NewListing";
 import RemoveListing from "./containers/RemoveListing";
 import Details from "./containers/Details";
 import Login from "./containers/Login";
-// import About from "./components/About";
-// import Car from "./containers/Car";
-// import Dashboard from "./containers/Dashboard";
-// import Import from "./containers/Import";
 
 const checkAuth = () => {
 	const cookies = cookie.parse(document.cookie);
 	return cookies["loggedIn"] ? true : false;
 };
-//
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
 	return (
@@ -33,7 +28,8 @@ const Router = () => {
 		<Switch>
 			<Route path="/details/:id" component={Details} />
 			<Route exact path="/" component={Listings} />
-			<ProtectedRoute path="/remove" component={RemoveListing} />
+			<Route path="/remove" component={RemoveListing} />
+			<Route path="/newlisting" component={NewListing} />
 			<Route path="/login" component={Login} />
 		</Switch>
 	);

@@ -23,9 +23,9 @@ const Listings = (props) => {
 			<div style={{ textAlign: "center" }}>
 				<h1>Add Resturant:</h1>
 
-				{/* <Link to={`/removelisting`}>
+				<Link to={`/removelisting`}>
 					<Button>Modify Resturant List</Button>
-				</Link> */}
+				</Link>
 			</div>
 			<Table>
 				<TableHead>
