@@ -1,15 +1,13 @@
 import { combineReducers } from "redux";
 
+// newState = {...state}
+//return newState.login = true
 const user = (state = null, action) => {
 	switch (action.type) {
 		case "LOG_IN":
 			return {
-				login: action.value
+				loggedIn: action.value
 			};
-		// case "LOG_OUT":
-		// 	return {
-		// 		access: action.value
-		// 	};
 		default:
 			return state;
 	}

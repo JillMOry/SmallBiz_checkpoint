@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import InputMask from "react-input-mask";
 import {
 	Button,
 	TextField,
@@ -7,15 +8,20 @@ import {
 	DialogTitle
 } from "@material-ui/core";
 
-class AddListing extends Component {
-	state = {
-		open: false,
-		name: "",
-		description: "",
-		hours: "",
-		phone: "",
-		address: ""
-	};
+class NewListing extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			open: false,
+			name: "",
+			description: "",
+			hours: "",
+			phone: "",
+			address: ""
+		};
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
 
 	toggleDialog = () => this.setState({ open: !this.state.open });
 
@@ -43,6 +49,7 @@ class AddListing extends Component {
 				name: "",
 				description: "",
 				hours: "",
+				phone: "",
 				address: ""
 			});
 		}
@@ -52,7 +59,6 @@ class AddListing extends Component {
 		return (
 			<Fragment>
 				<div style={{ textAlign: "center" }}>
-					<h1>Add Resturant:</h1>
 					<Button
 						variant="contained"
 						className="add-car"
@@ -89,14 +95,15 @@ class AddListing extends Component {
 								/>
 								<TextField
 									id="hours"
-									placeholder="hours"
+									placeholder="Hours"
 									value={this.state.hours}
 									onChange={this.handleTextChange}
 									required
 								/>
 								<TextField
+									ref="phone"
 									id="phone"
-									placeholder="phone"
+									placeholder="Phone"
 									value={this.state.phone}
 									onChange={this.handleTextChange}
 									required
@@ -105,7 +112,7 @@ class AddListing extends Component {
 									{" "}
 									<TextField
 										id="address"
-										placeholder="address"
+										placeholder="Address"
 										value={this.state.address}
 										onChange={this.handleTextChange}
 										required
@@ -124,4 +131,4 @@ class AddListing extends Component {
 	}
 }
 
-export default AddListing;
+export default NewListing;

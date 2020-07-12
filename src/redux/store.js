@@ -4,3 +4,5 @@ import reducers from "./reducers";
 import state from "./state";
 
 export default createStore(reducers, state, applyMiddleware(thunk));
+
+//google how to use redux dev tools with thunk

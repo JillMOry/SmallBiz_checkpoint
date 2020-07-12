@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NewListing from "../componets/NewListing";
+import NewListing from "../containers/NewListing";
 import {
 	Container,
 	Table,
@@ -14,8 +14,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 const New = (props) => {
 	return (
 		<Container maxWidth="lg" className="car-container">
-			<h4>Welcome,this is the remove listing page</h4>
-			<div className="flex-container">
+			<div className="flex-container" style={{ justifyContent: "flex-end" }}>
 				<NewListing />
 			</div>
 
@@ -40,11 +39,13 @@ const New = (props) => {
 							<TableCell>{listing["hours"]}</TableCell>
 							<TableCell>{listing["phone"]}</TableCell>
 							<TableCell>{listing["address"]}</TableCell>
-							<DeleteIcon
-								// add onClick method here
-								onClick={() => props.removeListing(idx)}
-								className="icon text-red"
-							/>
+							<TableCell>
+								<DeleteIcon
+									// add onClick method here
+									onClick={() => props.removeListing(idx)}
+									className="icon text-red"
+								/>
+							</TableCell>
 						</TableRow>
 					))}
 				</TableBody>
