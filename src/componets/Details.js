@@ -16,10 +16,6 @@ const Details = (props) => {
 							{Object.keys(listing).map((key, idx) => {
 								return <h4>{listing[key]}</h4>;
 							})}
-
-							<Link to={`/`}>
-								<Button>Home</Button>
-							</Link>
 						</Paper>
 					</Container>
 					<br />
@@ -30,10 +26,3 @@ const Details = (props) => {
 };
 
 export default Details;
-
-// <h2>{listing.id}</h2>
-// {Object.keys(listing).map((key, idx) => {
-//   return (
-//     <Chip key={idx} label={`${key}: ${listing[key]}`}></Chip>
-//   );
-// })}

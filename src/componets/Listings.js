@@ -12,6 +12,10 @@ import {
 } from "@material-ui/core";
 
 const Listings = (props) => {
+	function warning() {
+		alert("You must login to edit restuarnt list");
+	}
+
 	// 	render();
 	// if (this.state.loggedIn) {
 	// 	return <RemoveListing />;
@@ -20,8 +24,8 @@ const Listings = (props) => {
 		<Container maxWidth="lg" className="car-container">
 			<h4>Welcome, {props.user.username}</h4>
 			<div style={{ textAlign: "right" }}>
-				<Link to={`/removelisting`}>
-					<Button variant="contained" className="add-car">
+				<Link to={`/login`}>
+					<Button onClick={warning} variant="contained" className="add-car">
 						Modify Resturant List
 					</Button>
 				</Link>
