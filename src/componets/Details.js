@@ -12,12 +12,9 @@ const Details = (props) => {
 			{
 				<Container>
 					<Container maxWidth="sm">
-						<Paper>
-							<h2>{listing.id}</h2>
+						<Paper elevation={3} style={{ textAlign: "center" }}>
 							{Object.keys(listing).map((key, idx) => {
-								return (
-									<Chip key={idx} label={`${key}: ${listing[key]}`}></Chip>
-								);
+								return <h4>{listing[key]}</h4>;
 							})}
 
 							<Link to={`/`}>
@@ -33,3 +30,10 @@ const Details = (props) => {
 };
 
 export default Details;
+
+// <h2>{listing.id}</h2>
+// {Object.keys(listing).map((key, idx) => {
+//   return (
+//     <Chip key={idx} label={`${key}: ${listing[key]}`}></Chip>
+//   );
+// })}

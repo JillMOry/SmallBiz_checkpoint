@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import {
 	Container,
 	Button,
-	CardActions,
 	Table,
 	TableBody,
 	TableCell,
@@ -20,11 +19,11 @@ const Listings = (props) => {
 	return (
 		<Container maxWidth="lg" className="car-container">
 			<h4>Welcome, {props.user.username}</h4>
-			<div style={{ textAlign: "center" }}>
-				<h1>Add Resturant:</h1>
-
+			<div style={{ textAlign: "right" }}>
 				<Link to={`/removelisting`}>
-					<Button>Modify Resturant List</Button>
+					<Button variant="contained" className="add-car">
+						Modify Resturant List
+					</Button>
 				</Link>
 			</div>
 			<Table>
