@@ -22,7 +22,7 @@ const Listings = (props) => {
 	// } else {
 	return (
 		<Container maxWidth="lg" className="car-container">
-			<h4>Welcome, {props.user.username}</h4>
+			<h1>Welcome!</h1>
 			<div style={{ textAlign: "right" }}>
 				<Link to={`/login`}>
 					<Button onClick={warning} variant="contained" className="add-car">
@@ -50,14 +50,7 @@ const Listings = (props) => {
 							<TableCell>{listing["hours"]}</TableCell>
 							<TableCell>{listing["phone"]}</TableCell>
 							<TableCell>{listing["address"]}</TableCell>
-
-							<TableCell>
-								{/* <DeleteIcon
-									// add onClick method here
-									onClick={() => props.removeCar(idx)}
-									className="icon text-red"
-								/> */}
-							</TableCell>
+							<TableCell></TableCell>
 						</TableRow>
 					))}
 				</TableBody>
