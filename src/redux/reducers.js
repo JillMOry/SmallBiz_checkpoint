@@ -8,10 +8,7 @@ const user = (state = null, action) => {
 			return {
 				loggedIn: action.value
 			};
-		case "LOG_OUT":
-			return {
-				loggedOut: action.value
-			};
+
 		default:
 			return state;
 	}
