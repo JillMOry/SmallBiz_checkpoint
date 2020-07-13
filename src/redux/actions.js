@@ -1,7 +1,7 @@
-export const login = () => {
+export const login = (bool) => {
 	return {
 		type: "LOG_IN",
-		value: true
+		value: bool
 	};
 };
 

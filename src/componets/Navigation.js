@@ -24,7 +24,9 @@ const Navigation = (props) => {
 						<li
 							className="nav-list-item"
 							onClick={() => {
-								props.logout();
+								document.cookie = "loggedIn=";
+								props.login(false);
+
 								window.location.replace("/");
 							}}
 						>
@@ -34,7 +36,6 @@ const Navigation = (props) => {
 						<li
 							className="nav-list-item"
 							onClick={() => {
-								document.cookie = "loggedIn=false";
 								window.location.replace("/login");
 							}}
 						>
